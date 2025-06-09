@@ -1,0 +1,1 @@
+egy message passing rétegben minden node saját és szomszédjainak featurejeit aggregálja, szemben a fully connected réteggel ahol az összes neuron hatással van a következő réteg bármely neuronjára 

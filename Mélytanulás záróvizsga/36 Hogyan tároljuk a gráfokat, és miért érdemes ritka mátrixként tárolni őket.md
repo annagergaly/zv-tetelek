@@ -1,0 +1,2 @@
+szomszédsági mártix $n^2$ a csúcsok számában, ritka mátrixként (itt gyakorlatilag = él lista), worst case $O(n^2)$ (az él két vége + esetlegesen edge weight/features), de általában sparse-ak a gráfok igazi dataset-ekben 
+plusz node level feature-ök egy másik mátrixban és lehetnek gráf level feature-ök
