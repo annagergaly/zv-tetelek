@@ -1,0 +1,19 @@
+Data augmentation:
+- Geometriai transzformációk:
+	- Flip (tükrözés): vízszintesen/függőlegesen
+	- Crop (kivágás): véletlenszerűen
+	- Scale (átméretezés)
+	- Rotation (forgatás): véletlenszerűen
+	- Eltolás
+	- Zaj hozzáadása
+- Színmanipuláció (color distortion):
+	- brightness, hue, saturation
+	- rgb szín manipuláció
+ - Filterek:
+	 - élesítés, elmosás
+- Kép mixelés:
+	- CutMix: képből egy rész kivágása és egy másikból részlet bevágása
+	- MixUp: képek összemosása egymással
+	- Cutout: képből egy részlet kivágása
+- Információtörlés:
+	- random törlés a képből, vagy maszkolás

@@ -1,0 +1,22 @@
+Adatok használása a pipeline-ban:
+- Collection:
+	- capturing new images
+	- scraping
+	- public datasets
+ - Filtering, cleaning
+	 - using pretrained networks, manually or both
+	 - based on semantics, metadata or image quality
+- Annotating:
+	- iteratív folyamat
+	- vannak labeling servicek
+	- árbefolyásoló tényezők: mennyiség, komplexitás, domain ismeret
+	- vagy automatizálva, félig automatizálva, pretrained hálókkal vagy fine-tuning looppal, vannak rá open source toolok is
+	- active learning: selecting samples for labeling with presumably the most impact
+- Data loading and augmentation
+Adatdúsítás (data augmentation):
+- Új tanító minták készítése az eredetiekből valamilyen transzformációval
+- Előnye, hogy kevesebb adatból csinálunk "többet"
+- Tanítás közben számíthatók a random transzformációk, így nem igényel többlet tárolást
+- Segít a modell általánosító képességét javítani, túltanulás esélyét csökkenteni
+- Pl.: tükrözés, forgatás, levágás, színkorrekció
+- Fontos, hogy ha van label (pl egy segmentation mask, akkor arra is alkalmazni kell (pl egy tükrözést))
