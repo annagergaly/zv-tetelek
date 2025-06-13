@@ -1,0 +1,26 @@
+Eredeti transzformerben ilyen variációk voltak:
+- Más az embedding mérete
+- Más a feed forward layerekben a latent space dimenziója
+- Más a head-ek száma a multi-head atetntionben
+- Lehetne más a blokkok száma, de az nem volt
+Ez itt ChatGPT meg józanész gondolat:
+- Méret:
+	- Nagyobb modellekben több a paraméter
+	- Több réteg
+	- Magasabb hidden dimenzió
+	- Több head
+- Teljesítmény:
+	- Nagyobb modellek jobbak kontextustan és megértésben, általános diverz NLP taskokban, jobban tudnak működni továbbtanítás nélkül specifikus taskokon
+	- Nagyobb modell jobban tudja a few-shot és zero-shot scenáriókat
+	- Kisebb modelleket fine-tunolni kell a specifikus taskra
+	- Kisebb modelleknek lehetnek problémáik a nagy kontextussal, kétértelműséggel vagy többlépéses érveléssel
+- Training and inference cost:
+	- A nagyobb modelleket drágább tanítani és futtatni
+	- Kisebb modelleket olcsóbb, pl CPU-n vagy edge device-okon, akár real-time
+- Use-case:
+	- Másra jók
+- Tudás és általánosítás:
+	- nagy modellek: lehetnek multimodálisak, nagy tudásúak a világra nézve, jól transzfertanulnának
+	- kis modellek: task-specifikusak
+- Kisebb modellek gyakran használnak knowledge distilationt, pruningot vagy kvantálást
+- Nagy modellek több 100 milliárd paraméteresek is lehetnek

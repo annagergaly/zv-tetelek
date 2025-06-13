@@ -1,0 +1,50 @@
+Kérdésben lévők:
+- mixed precision 16 bit
+	- alacsonyabb pontosságú adattípust használ
+	- így kevesebb memória kell, gyorsabb az adat transzfer is (mert kevesebb memory bandwidth kell), kevesebb memória miatt elfér nagyobb modell vagy több adat (nagyobb batch)
+	- alacsonyabb pontossággal gyorsabban futnak a matematikai műveletek
+	- mixed precision lényege, hogy eldönti mihez kell full precision és mihez elég alacsonyabb, és amit lehet alacsonyabbon, azt azzal futtatja
+- larger batch size
+	- Több adat fér el a GPU-ra, ha sok memória van a GPU-n, akkor jobban kihasználjuk a hardvert is
+	- gyorsabb epochok, mert kevesebb update van per epoch
+- multi GPU
+	- több GPU-ra rakja az adatot
+	- a GPU-k között a parameter update lehet szinkron vagy aszinkron
+	- DataParallel:
+		- egy gépen több GPU
+		- GPU 0 koordinálja az egészet, több a többi GPU-nak egy mini-batchet (mármint tényleg egy batchet feldarabolva), a forward passt visszaküldik a GPU 0-nak, GPU 0 visszaküldi a losst, a GPU-k kiszámolják a backward passt, GPU 0 kiátlagolja a gradienseket
+	- Distributed Data Parllel (DDP):
+		- ez több gépen lévő GPU-kkal foglalkozik
+		- kevesebb kommunikáció a GPU-k között
+		- a lokális gradienseket az összes GPU-n kiátlagolják a backward passnál
+	- modell paralellizmus
+		- több videókáryán van a modell
+		- Kiszámolja valameddig a modellt egy GPU, majd átadja a kimenetet egy másiknak
+- XLA/pytorch 2.0
+	- XLA=Accelerated Linear Algebra
+	- TorchDynamo gyorsabbra compile-olja a pytorch gráfokat
+	- Fogalmam sincs mi ez
+- num_workers
+	- DataLoader: hány subprocesset használjon az adat betöltésre
+- pin_memory
+	- DataLoader: lefoglalja a device-on a memoryt (ez a pinned memory?) és akkor gyorsabban rá tudja másolni pl a GPU-ra
+	- gyorsabb a transzfer CPU-GPU memória között?
+- pretrained models
+	- Előrebetanított modell, csak egy kicsit finomhangolni kell a taskunkra, nem kell 0-ról betanítani
+	- Gyorsabb, kevesebb labeled adat kell
+- profiling
+	- Könnyebb észrevenni, hogy mi lassítja a folyamatot
+	- Pl data loading, GPU kihasználtság, memória kihasználtság
+	- Jobban megtudjuk, hogy mit kellene pontosan optimalizálni
+Egyebek:
+- Early stopping:
+	- Hamarabb megállítjuk a tanítást, ha már kezdene túltanulni
+- Megfelelő optimizer használata
+	- ami dinamikusan változtatja a learning rate-et
+- Model checkpointing:
+	- hiba esetén könnyebb újra folytatni, mert nem kell legelőről kezdeni
+- Kisebb modell használata:
+	- ha a taskra van értelme, akkor kisebb modell gyrosabban tanulhat
+- on the fly data augmentation, és így kevesebb IO olvasás kell, szemben azzal, ha ki van mentve
+- aszinkron adatfeldolgozás
+- gyorsabb ssd vagy ram diskek
