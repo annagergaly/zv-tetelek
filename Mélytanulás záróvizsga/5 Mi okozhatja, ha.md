@@ -3,4 +3,4 @@
 
 1. underfittingnél a modell nem képes jól rátanulni a tanító adatra, nem elég magas a paraméter szám, nem megfelelő az architektúra, nincs elég adat, nem tanult még eleget a modell
 2. overfittingnél a modell túlságosan rátanul a tanító adatra és nem tud generalizálni. túl magas paraméterszám, túl kevés adat, túl hosszú tanítás (early stopping), regularizáció szükséges
-3. overregularizáció (erre kb semmi találat nincs lol), túl sok constraint van a modelben amitől nem tud igazán rátanulni az adatra
+3. overregularizáció (erre kb semmi találat nincs lol), túl sok constraint van a modelben amitől nem tud igazán rátanulni az adatra, túl sok regularizáció. Könnyebb a validation adat, mint a tanító? Rosszul vannak splittelve, átfolyik adat? (Data augmentation a tanítóban, amiatt az nehezebb lesz, de nincsen a validben.)

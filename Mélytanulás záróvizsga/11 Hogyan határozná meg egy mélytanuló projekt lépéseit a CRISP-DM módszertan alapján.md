@@ -7,3 +7,5 @@
 + Modeling
 + Evaluation
 + Deployment
+
+![image](11_01_CRISPDM.PNG)

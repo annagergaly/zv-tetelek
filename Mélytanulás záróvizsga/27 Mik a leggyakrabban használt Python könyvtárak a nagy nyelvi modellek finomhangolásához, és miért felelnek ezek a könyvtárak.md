@@ -11,6 +11,6 @@ Hugging Face datasets:
 - könnyen integrálható a transformerssel
 Peft (by hugging face): ezzel lehet LoRÁ-val tanítani például
 Accelerate (by hugging face): multi-GPU, mixed precision tanítás
-Training backendek: Python, Tensorflow, JAX
+Training backendek: PyTorch, Tensorflow, JAX
 - Ezek a mögöttes deep learning frameworkök a tanításra és fine-tuningra
-Egyebek: pl wandb logolásra, hyperparaméter optimalizádcióra és checkpoint mentésre
+Egyebek: pl wandb logolásra, hyperparaméter optimalizációra és checkpoint mentésre

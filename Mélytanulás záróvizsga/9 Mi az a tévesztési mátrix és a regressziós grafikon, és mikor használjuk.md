@@ -5,4 +5,5 @@
 	+ látszanak a modell gyakori hibái
 + regressziós grafikon (erre így magyarul konkrétan nincs találat.) regression graph?
 	+ regresszió I guess
-	+ egy változó kapcsolata egy másikkal (másikakkal) és az illesztett görbe 
+	+ egy változó kapcsolata egy másikkal (másikakkal) és az illesztett görbe
+	+ lehet könnyebb látni az outliereket

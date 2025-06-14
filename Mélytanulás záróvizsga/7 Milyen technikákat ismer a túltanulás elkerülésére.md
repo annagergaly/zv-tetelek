@@ -1,7 +1,7 @@
 + Early stopping
 + Dropout
-+ Ensamble
++ Ensemble
 + Simplify model
 + More data
 	+ Data augmentation
-+ Regularizáció
++ Regularizáció (L1, L2)

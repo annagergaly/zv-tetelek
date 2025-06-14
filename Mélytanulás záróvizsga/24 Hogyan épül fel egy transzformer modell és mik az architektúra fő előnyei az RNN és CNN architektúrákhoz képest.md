@@ -24,7 +24,7 @@ Előnyei:
 - CNN-nel szemben:
 	- dinamikus hosszú szekvenciát fel tud dolgozni, szemben a fix mérettel
 	- hosszabb dependenciát meg tud jegyezni
-	- nincsen memóriája
+	- nincsen memóriája, a CNN-nek
 
 ![image](24_01_transformer.PNG)
 ![image](24_02_attention.PNG)

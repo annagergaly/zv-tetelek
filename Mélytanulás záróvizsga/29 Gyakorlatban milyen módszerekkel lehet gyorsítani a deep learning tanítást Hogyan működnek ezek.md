@@ -7,6 +7,7 @@ Kérdésben lévők:
 - larger batch size
 	- Több adat fér el a GPU-ra, ha sok memória van a GPU-n, akkor jobban kihasználjuk a hardvert is
 	- gyorsabb epochok, mert kevesebb update van per epoch
+	- hozzá kell igazítani a learning rate-et
 - multi GPU
 	- több GPU-ra rakja az adatot
 	- a GPU-k között a parameter update lehet szinkron vagy aszinkron
